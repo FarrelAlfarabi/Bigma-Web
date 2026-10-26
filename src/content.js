@@ -4,10 +4,10 @@ export const site = {
   tagline: 'Software yang membuat bisnis Anda berjalan lebih cepat.',
   intro:
     'Kami membuat website, aplikasi web, dan sistem internal sesuai kebutuhan bisnis Anda. Dari ide sampai siap dipakai.',
-  email: 'hello@bigma.id', // TODO: confirm the Google Workspace address
-  whatsapp: '6281234567890', // TODO: real number, country code, no + or spaces
-  whatsappLabel: '+62 812-3456-7890', // TODO
-  city: 'Indonesia', // TODO: real city
+  email: 'businessbigma@gmail.com',
+  whatsapp: '6281536096663', // country code, no + or spaces
+  whatsappLabel: '+62 815-3609-6663',
+  city: 'Indonesia', // TODO: replace with the real city if wanted
 }
 
 export const services = [
