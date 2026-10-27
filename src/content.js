@@ -7,7 +7,7 @@ export const site = {
   email: 'businessbigma@gmail.com',
   whatsapp: '6281536096663', // country code, no + or spaces
   whatsappLabel: '+62 815-3609-6663',
-  city: 'Indonesia', // TODO: replace with the real city if wanted
+  city: 'Jakarta',
 }
 
 export const services = [
