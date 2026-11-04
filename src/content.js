@@ -1,9 +1,9 @@
 // Placeholder content. Replace the values marked TODO with real details.
 export const site = {
   name: 'Bigma',
-  tagline: 'Software yang membuat bisnis Anda berjalan lebih cepat.',
+  tagline: 'Software custom untuk siapa saja yang membutuhkannya.',
   intro:
-    'Kami membuat website, aplikasi web, dan sistem internal sesuai kebutuhan bisnis Anda. Dari ide sampai siap dipakai.',
+    'Kami membuat website, aplikasi, dan sistem sesuai kebutuhan Anda, baik untuk bisnis, organisasi, komunitas, maupun pribadi. Dari ide sampai siap dipakai.',
   email: 'businessbigma@gmail.com',
   whatsapp: '6281536096663', // country code, no + or spaces
   whatsappLabel: '+62 815-3609-6663',
