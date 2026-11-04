@@ -37,7 +37,7 @@ export const projects = [
     title: 'Zonein',
     kind: 'Aplikasi sales lapangan (pratinjau desain)',
     text: 'Absensi dengan selfie dan GPS, kunjungan toko, dan cek rak dengan AI. Ada tampilan ponsel dan dasbor manajer.',
-    url: 'https://zonein-demo.vercel.app',
+    url: 'https://zonein-preview.vercel.app',
   },
   {
     title: 'Nomiko',
