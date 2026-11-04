@@ -35,9 +35,9 @@ export const steps = [
 export const projects = [
   {
     title: 'Zonein',
-    kind: 'Aplikasi sales lapangan (versi web)',
+    kind: 'Aplikasi sales lapangan (pratinjau desain)',
     text: 'Absensi dengan selfie dan GPS, kunjungan toko, dan cek rak dengan AI. Ada tampilan ponsel dan dasbor manajer.',
-    url: 'https://zonein-showcase.vercel.app',
+    url: 'https://zonein-preview.vercel.app',
   },
   {
     title: 'Nomiko',
@@ -62,6 +62,12 @@ export const projects = [
     kind: 'Website portofolio pribadi',
     text: 'Portofolio strategi pemasaran dan business intelligence.',
     url: 'https://www.farrelalfarabisaleh.my.id',
+  },
+  {
+    title: 'Farrel Alfarabi (Creative Developer)',
+    kind: 'Website portofolio dengan animasi',
+    text: 'Portofolio dengan adegan WebGL, grafis real-time, dan studi kasus.',
+    url: 'https://farrelportfolio.netlify.app',
   },
   {
     title: 'Nabila Siregar',
