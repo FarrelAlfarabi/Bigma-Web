@@ -64,7 +64,7 @@ export default function App() {
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Pengembangan software</p>
+              <p className="eyebrow">Custom software</p>
               <h1>{site.tagline}</h1>
               <p className="lead">{site.intro}</p>
               <div className="actions">
