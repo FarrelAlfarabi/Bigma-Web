@@ -34,57 +34,66 @@ export const steps = [
 
 export const projects = [
   {
-    title: 'Zonein',
-    kind: 'Aplikasi sales lapangan (pratinjau desain)',
-    text: 'Absensi dengan selfie dan GPS, kunjungan toko, dan cek rak dengan AI. Ada tampilan ponsel dan dasbor manajer.',
-    url: 'https://zonein-preview.vercel.app',
-  },
-  {
     title: 'Nomiko',
     kind: 'Website brand produk (contoh desain)',
     text: 'Website brand untuk produk makanan anak, lengkap dengan halaman produk dan cerita brand.',
+    image: '/previews/nomiko.jpg',
     url: 'https://nomiko-web.vercel.app',
   },
   {
     title: 'KHN',
     kind: 'Website asosiasi profesi (contoh desain)',
     text: 'Website asosiasi dengan profil, kegiatan, pustaka, toko, dan data anggota.',
+    image: '/previews/khn.jpg',
     url: 'https://khn-web.vercel.app',
   },
   {
     title: 'Lumenify',
     kind: 'Website portofolio dan tim',
     text: 'Website profesional untuk menampilkan portofolio dan tim.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://lumenify.id',
     url: 'https://lumenify.id',
   },
   {
     title: 'Farrel Alfarabi Saleh',
     kind: 'Website portofolio pribadi',
     text: 'Portofolio strategi pemasaran dan business intelligence.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://www.farrelalfarabisaleh.my.id',
     url: 'https://www.farrelalfarabisaleh.my.id',
   },
   {
     title: 'Farrel Alfarabi (Creative Developer)',
     kind: 'Website portofolio dengan animasi',
     text: 'Portofolio dengan adegan WebGL, grafis real-time, dan studi kasus.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://farrelportfolio.netlify.app',
     url: 'https://farrelportfolio.netlify.app',
   },
   {
     title: 'Nabila Siregar',
     kind: 'Website portofolio',
     text: 'Portofolio brand dan pemasaran.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://nabila-site-drab.vercel.app',
     url: 'https://nabila-site-drab.vercel.app',
   },
   {
     title: 'Faishal Zuhair',
     kind: 'Website portofolio',
     text: 'Portofolio konsultan bisnis dan strategi pemasaran.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://faishal-portofolio-five.vercel.app',
     url: 'https://faishal-portofolio-five.vercel.app',
   },
   {
     title: 'Thomas Raditya',
     kind: 'Website portofolio',
     text: 'Portofolio pemasaran dan branding.',
+    image: 'https://image.thum.io/get/width/800/crop/500/noanimate/https://thomas-portfolio-five.vercel.app',
     url: 'https://thomas-portfolio-five.vercel.app',
+  },
+  {
+    title: 'Zonein',
+    kind: 'Aplikasi sales lapangan (pratinjau desain)',
+    text: 'Absensi dengan selfie dan GPS, kunjungan toko, dan cek rak dengan AI. Ada tampilan ponsel dan dasbor manajer.',
+    image: '/previews/zonein.jpg',
+    url: 'https://zonein-preview.vercel.app',
   },
 ]

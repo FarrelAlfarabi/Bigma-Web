@@ -13,8 +13,8 @@ export default function App() {
             big<span>ma</span>
           </a>
           <nav>
+            <a href="#portofolio" className="nav-work">Contoh Karya</a>
             <a href="#layanan">Layanan</a>
-            <a href="#portofolio">Portofolio</a>
             <a href="#tentang">Tentang</a>
             <a href="#kontak" className="btn btn-small">Kontak</a>
           </nav>
@@ -30,32 +30,18 @@ export default function App() {
               <a className="btn" href={waLink} target="_blank" rel="noreferrer">
                 Chat WhatsApp
               </a>
-              <a className="btn btn-ghost" href={`mailto:${site.email}`}>
-                Kirim Email
+              <a className="btn btn-ghost" href="#portofolio">
+                Lihat Contoh Karya
               </a>
             </div>
           </div>
         </section>
 
-        <section id="layanan" className="section">
-          <div className="container">
-            <h2>Layanan</h2>
-            <div className="grid">
-              {services.map((s) => (
-                <div className="card" key={s.title}>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="portofolio" className="section alt">
+        <section id="portofolio" className="section">
           <div className="container">
             <h2>Contoh Karya</h2>
             <p className="lead dark">Beberapa website dan aplikasi yang sudah kami buat.</p>
-            <div className="grid">
+            <div className="grid work-grid">
               {projects.map((p) => (
                 <a
                   className="card work"
@@ -64,11 +50,30 @@ export default function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="kind">{p.kind}</span>
-                  <h3>{p.title}</h3>
-                  <p>{p.text}</p>
-                  <span className="visit">Buka website →</span>
+                  <div className="thumb">
+                    <img src={p.image} alt={`Tampilan ${p.title}`} loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+                  </div>
+                  <div className="work-body">
+                    <span className="kind">{p.kind}</span>
+                    <h3>{p.title}</h3>
+                    <p>{p.text}</p>
+                    <span className="visit">Buka website →</span>
+                  </div>
                 </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="layanan" className="section alt">
+          <div className="container">
+            <h2>Layanan</h2>
+            <div className="grid">
+              {services.map((s) => (
+                <div className="card" key={s.title}>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
               ))}
             </div>
           </div>
