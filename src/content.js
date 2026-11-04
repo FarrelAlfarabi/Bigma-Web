@@ -64,6 +64,12 @@ export const projects = [
     url: 'https://www.farrelalfarabisaleh.my.id',
   },
   {
+    title: 'Farrel Alfarabi (Creative Developer)',
+    kind: 'Website portofolio dengan animasi',
+    text: 'Portofolio dengan adegan WebGL, grafis real-time, dan studi kasus.',
+    url: 'https://farrelportfolio.netlify.app',
+  },
+  {
     title: 'Nabila Siregar',
     kind: 'Website portofolio',
     text: 'Portofolio brand dan pemasaran.',
