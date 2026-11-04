@@ -17,6 +17,18 @@ const icons = {
   ),
 }
 
+function Wordmark() {
+  return (
+    <>
+      <span className="hl">b</span>
+      <span className="dim">i</span>
+      <span className="hl">g</span>
+      <span className="hl">m</span>
+      <span className="dim">a</span>
+    </>
+  )
+}
+
 export default function App() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
@@ -27,8 +39,8 @@ export default function App() {
       <a className="skip" href="#portofolio">Lewati ke konten</a>
       <header className="nav">
         <div className="container nav-inner">
-          <a href="#top" className="logo" onClick={close}>
-            big<span>ma</span>
+          <a href="#top" className="logo" aria-label="Bigma" onClick={close}>
+            <Wordmark />
           </a>
           <button
             className="menu-btn"
@@ -174,7 +186,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="container foot">
-          <span className="logo small">big<span>ma</span></span>
+          <span className="logo small" aria-label="Bigma"><Wordmark /></span>
           <span>© {new Date().getFullYear()} Bigma. bigma.id</span>
         </div>
       </footer>
