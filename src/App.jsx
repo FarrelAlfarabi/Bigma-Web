@@ -1,4 +1,4 @@
-import { site, services, steps } from './content.js'
+import { site, services, steps, projects } from './content.js'
 
 const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
   'Halo Bigma, saya ingin berdiskusi tentang proyek.',
@@ -14,6 +14,7 @@ export default function App() {
           </a>
           <nav>
             <a href="#layanan">Layanan</a>
+            <a href="#portofolio">Portofolio</a>
             <a href="#tentang">Tentang</a>
             <a href="#kontak" className="btn btn-small">Kontak</a>
           </nav>
@@ -50,7 +51,30 @@ export default function App() {
           </div>
         </section>
 
-        <section id="tentang" className="section alt">
+        <section id="portofolio" className="section alt">
+          <div className="container">
+            <h2>Contoh Karya</h2>
+            <p className="lead dark">Beberapa website dan aplikasi yang sudah kami buat.</p>
+            <div className="grid">
+              {projects.map((p) => (
+                <a
+                  className="card work"
+                  key={p.url}
+                  href={p.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="kind">{p.kind}</span>
+                  <h3>{p.title}</h3>
+                  <p>{p.text}</p>
+                  <span className="visit">Buka website →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="tentang" className="section">
           <div className="container">
             <h2>Tentang Bigma</h2>
             <p className="lead dark">
@@ -71,7 +95,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="kontak" className="section">
+        <section id="kontak" className="section alt">
           <div className="container">
             <h2>Hubungi Kami</h2>
             <p className="lead dark">Ceritakan kebutuhan Anda. Kami balas secepatnya.</p>
