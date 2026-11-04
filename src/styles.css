@@ -37,7 +37,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid #38bdf8; outline-offs
 .nav nav a.nav-work { color: #fff; font-weight: 600; }
 .nav nav a.btn { margin-left: 8px; color: #fff; }
 .logo { font-weight: 800; font-size: 26px; text-decoration: none; color: #fff; letter-spacing: -0.8px; }
-.logo span { color: #38bdf8; }
+.logo .hl { color: #38bdf8; }
+.logo .dim { color: #fff; opacity: .55; font-weight: 600; }
 .menu-btn { display: none; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 8px; min-height: 44px; padding: 0 16px; font: inherit; font-weight: 600; cursor: pointer; }
 
 /* buttons */
