@@ -60,3 +60,9 @@ a { color: var(--brand); }
   .nav nav a:not(.btn) { display: none; }
   .hero { padding: 64px 0; }
 }
+
+.work { display: block; text-decoration: none; color: inherit; }
+.work:hover { border-color: var(--brand); }
+.kind { font-size: 13px; color: var(--brand); font-weight: 600; }
+.work h3 { margin: 4px 0 8px; }
+.visit { display: inline-block; margin-top: 12px; color: var(--brand); font-weight: 600; }
