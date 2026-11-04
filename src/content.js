@@ -40,6 +40,18 @@ export const projects = [
     url: 'https://zonein-demo.vercel.app',
   },
   {
+    title: 'Nomiko',
+    kind: 'Website brand produk (contoh desain)',
+    text: 'Website brand untuk produk makanan anak, lengkap dengan halaman produk dan cerita brand.',
+    url: 'https://nomiko-web.vercel.app',
+  },
+  {
+    title: 'KHN',
+    kind: 'Website asosiasi profesi (contoh desain)',
+    text: 'Website asosiasi dengan profil, kegiatan, pustaka, toko, dan data anggota.',
+    url: 'https://khn-web.vercel.app',
+  },
+  {
     title: 'Lumenify',
     kind: 'Website portofolio dan tim',
     text: 'Website profesional untuk menampilkan portofolio dan tim.',
