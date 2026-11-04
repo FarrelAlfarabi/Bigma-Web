@@ -6,11 +6,17 @@ const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
 )}`
 
 const icons = {
-  'Website Bisnis': (
+  'Website': (
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M7 6.5h.01M10 6.5h.01" /></svg>
   ),
   'Aplikasi Web': (
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5" /><rect x="13" y="3" width="8" height="5" rx="1.5" /><rect x="13" y="10" width="8" height="11" rx="1.5" /><rect x="3" y="13" width="8" height="8" rx="1.5" /></svg>
+  ),
+  'Aplikasi Mobile': (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" /><path d="M11 18.5h2" /></svg>
+  ),
+  'Software Lainnya': (
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" /></svg>
   ),
   'Sistem Internal': (
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z" /><path d="M4 7v5c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12v5c0 1.7 3.6 3 8 3s8-1.3 8-3v-5" /></svg>
@@ -119,6 +125,7 @@ export default function App() {
             <div className="head">
               <p className="eyebrow dark">Layanan</p>
               <h2>Apa yang bisa kami buat</h2>
+              <p className="sub">Website, aplikasi web, aplikasi mobile, sampai software lain sesuai kebutuhan Anda.</p>
             </div>
             <div className="svc-grid">
               {services.map((s) => (

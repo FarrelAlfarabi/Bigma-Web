@@ -12,16 +12,24 @@ export const site = {
 
 export const services = [
   {
-    title: 'Website Bisnis',
-    text: 'Website company profile yang cepat, rapi, dan mudah ditemukan di Google.',
+    title: 'Website',
+    text: 'Website yang cepat, rapi, dan mudah ditemukan di Google, untuk bisnis, organisasi, atau pribadi.',
   },
   {
     title: 'Aplikasi Web',
     text: 'Aplikasi khusus untuk kebutuhan Anda, seperti dashboard, booking, atau katalog.',
   },
   {
+    title: 'Aplikasi Mobile',
+    text: 'Aplikasi untuk Android dan iPhone, dari aplikasi lapangan sampai aplikasi untuk pelanggan Anda.',
+  },
+  {
     title: 'Sistem Internal',
     text: 'Gantikan spreadsheet dan catatan manual dengan sistem yang rapi dan aman.',
+  },
+  {
+    title: 'Software Lainnya',
+    text: 'Punya kebutuhan lain? Ceritakan, kami buatkan software yang sesuai.',
   },
 ]
 
