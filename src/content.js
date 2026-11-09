@@ -107,7 +107,7 @@ export const projects = [
   {
     title: 'Lingkaran',
     kind: 'Aplikasi jejaring alumni (pratinjau desain)',
-    text: 'Direktori alumni, lowongan, usaha dan produk alumni, permintaan kontak, dan alat admin. Tur 51 layar dengan data contoh.',
+    text: 'Direktori alumni, lowongan, usaha dan produk alumni, permintaan kontak, dan alat admin. Tur 117 layar desain terbaru dengan data contoh.',
     image: '/previews/lingkaran.jpg',
     url: 'https://lingkaran-preview.vercel.app',
   },
