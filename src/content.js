@@ -104,4 +104,11 @@ export const projects = [
     image: '/previews/zonein.jpg',
     url: 'https://zonein-preview.vercel.app',
   },
+  {
+    title: 'Lingkaran',
+    kind: 'Aplikasi jejaring alumni (pratinjau desain)',
+    text: 'Direktori alumni, lowongan, usaha dan produk alumni, permintaan kontak, dan alat admin. Tur 117 layar desain terbaru dengan data contoh.',
+    image: '/previews/lingkaran.jpg',
+    url: 'https://lingkaran-preview.vercel.app',
+  },
 ]
