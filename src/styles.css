@@ -123,6 +123,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid #38bdf8; outline-offs
 .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .logo.small { font-size: 20px; }
 
+/* Floating WhatsApp button */
+.wa-float { position: fixed; right: 16px; bottom: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 20; display: inline-flex; align-items: center; gap: 8px; height: 56px; min-width: 56px; padding: 0 16px; justify-content: center; border-radius: 28px; background: #25d366; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; box-shadow: 0 6px 18px rgba(0,0,0,.28); transition: transform .15s, background .15s; }
+.wa-float:hover { background: #1ebe5b; transform: translateY(-2px); }
+.wa-float:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: 0 0 0 5px #128c7e; }
+.wa-float svg { width: 28px; height: 28px; flex: none; }
+.footer { padding-bottom: 96px; }
+
 @media (max-width: 860px) {
   .hero-grid, .about, .cta-inner { grid-template-columns: 1fr; gap: 36px; }
   .hero { padding: 56px 0 64px; }
@@ -133,7 +140,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid #38bdf8; outline-offs
   .nav nav.open { display: flex; }
   .nav nav a.btn { margin: 8px 0 0; justify-content: center; }
 }
+@media (max-width: 520px) {
+  .wa-float { padding: 0; width: 56px; }
+  .wa-float-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
 @media (prefers-reduced-motion: reduce) {
+  .wa-float { transition: none; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
