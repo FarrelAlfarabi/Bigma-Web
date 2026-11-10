@@ -1,13 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { site, services, steps, projects } from './content.js'
+import { currentSource, waHref, whatsappClick } from './analytics.js'
 
-const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-  'Halo Bigma, saya ingin berdiskusi tentang proyek.',
-)}`
-
-const floatWaLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-  'Halo Bigma, saya ingin bertanya tentang pembuatan aplikasi.',
-)}`
 
 const icons = {
   'Website': (
@@ -42,6 +36,15 @@ function Wordmark() {
 export default function App() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+
+  // Pre-rendered HTML carries the default text. After load, give every WhatsApp link the text for
+  // the visitor's channel (?src=google etc.), so it also works for middle-click and copy link.
+  useEffect(() => {
+    const href = waHref(currentSource())
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach((a) => {
+      a.href = href
+    })
+  }, [])
   const hero = projects.filter((p) => p.image.startsWith('/previews/'))
 
   return (
@@ -78,7 +81,7 @@ export default function App() {
               <h1>{site.tagline}</h1>
               <p className="lead">{site.intro}</p>
               <div className="actions">
-                <a className="btn" href={waLink} target="_blank" rel="noreferrer">Chat WhatsApp</a>
+                <a className="btn" href={waHref()} onClick={whatsappClick('hero')} target="_blank" rel="noreferrer">Chat WhatsApp</a>
                 <a className="btn btn-ghost" href="#portofolio">Lihat Contoh Karya</a>
               </div>
             </div>
@@ -182,12 +185,12 @@ export default function App() {
             </div>
             <div className="cta-side">
               <div className="actions">
-                <a className="btn btn-light" href={waLink} target="_blank" rel="noreferrer">Chat WhatsApp</a>
+                <a className="btn btn-light" href={waHref()} onClick={whatsappClick('contact_button')} target="_blank" rel="noreferrer">Chat WhatsApp</a>
                 <a className="btn btn-ghost" href={`mailto:${site.email}`}>Kirim Email</a>
               </div>
               <ul className="contact">
                 <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>
-                <li>WhatsApp: <a href={waLink} target="_blank" rel="noreferrer">{site.whatsappLabel}</a></li>
+                <li>WhatsApp: <a href={waHref()} onClick={whatsappClick('contact_list')} target="_blank" rel="noreferrer">{site.whatsappLabel}</a></li>
                 <li>Lokasi: {site.city}</li>
               </ul>
             </div>
@@ -204,7 +207,8 @@ export default function App() {
 
       <a
         className="wa-float"
-        href={floatWaLink}
+        href={waHref()}
+        onClick={whatsappClick('floating')}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat Bigma lewat WhatsApp"
