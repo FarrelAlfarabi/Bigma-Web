@@ -80,9 +80,10 @@ export function whatsappClick(placement) {
   return (e) => {
     const source = currentSource()
     e.currentTarget.href = waHref(source)
+    // Named "channel", not "source": GA4 treats "source" as a traffic-source field.
     track('whatsapp_click', {
       placement,
-      source,
+      channel: source,
       transport_type: 'beacon',
     })
   }
