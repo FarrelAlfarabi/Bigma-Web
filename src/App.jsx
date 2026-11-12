@@ -21,16 +21,9 @@ const icons = {
   ),
 }
 
-function Wordmark() {
-  return (
-    <>
-      <span className="hl">b</span>
-      <span className="dim">i</span>
-      <span className="hl">g</span>
-      <span className="hl">m</span>
-      <span className="dim">a</span>
-    </>
-  )
+function Logo({ small }) {
+  // Official reverse logo from the Bigma brand kit (symbol + name, on navy). Do not retype or recolour.
+  return <img src="/brand/logo-reverse.svg" alt="Bigma" width="635" height="210" style={{ aspectRatio: '635 / 210' }} className={small ? 'sm' : ''} />
 }
 
 export default function App() {
@@ -53,7 +46,7 @@ export default function App() {
       <header className="nav">
         <div className="container nav-inner">
           <a href="#top" className="logo" aria-label="Bigma" onClick={close}>
-            <Wordmark />
+            <Logo />
           </a>
           <button
             className="menu-btn"
@@ -200,7 +193,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="container foot">
-          <span className="logo small" aria-label="Bigma"><Wordmark /></span>
+          <span className="logo small"><Logo small /></span>
           <span>© {new Date().getFullYear()} Bigma. bigma.id</span>
         </div>
       </footer>
