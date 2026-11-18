@@ -63,3 +63,5 @@ textarea{min-height:90px;resize:vertical}
 .chk{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:13.5px;color:var(--mut);cursor:pointer}
 .chk input{width:22px;height:22px;margin:1px 0 0;flex:none;accent-color:var(--navy)}
 .btn:focus-visible,.opt:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.btn.home{display:block;width:100%;margin-top:10px;text-align:center;text-decoration:none;background:var(--navy);border-color:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .btn.home{background:var(--orange);border-color:var(--orange);color:#0F2A5C}}
