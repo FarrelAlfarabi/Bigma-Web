@@ -58,6 +58,7 @@ export default function App() {
           </button>
           <nav id="menu" className={open ? 'open' : ''}>
             <a href="#portofolio" className="nav-work" onClick={close}>Contoh Karya</a>
+            <a href="/kebutuhan/" onClick={close}>Form Kebutuhan</a>
             <a href="#layanan" onClick={close}>Layanan</a>
             <a href="#proses" onClick={close}>Proses</a>
             <a href="#tentang" onClick={close}>Tentang</a>
@@ -75,6 +76,7 @@ export default function App() {
               <p className="lead">{site.intro}</p>
               <div className="actions">
                 <a className="btn" href={waHref()} onClick={whatsappClick('hero')} target="_blank" rel="noreferrer">Chat WhatsApp</a>
+                <a className="btn btn-ghost" href="/kebutuhan/">Isi Form Kebutuhan</a>
                 <a className="btn btn-ghost" href="#portofolio">Lihat Contoh Karya</a>
               </div>
             </div>
