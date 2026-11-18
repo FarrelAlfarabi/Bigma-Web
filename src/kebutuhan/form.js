@@ -1,8 +1,6 @@
 /* Form Kebutuhan Bigma. Plain JS, no framework. */
 
 var WA="6281536096663";
-var SB_URL=(import.meta.env.VITE_SUPABASE_URL||"").trim().replace(/\/$/,"");
-var SB_KEY=(import.meta.env.VITE_SUPABASE_ANON_KEY||"").trim();
 var saved=null;
 function srcName(){try{var q=new URLSearchParams(location.search);return (q.get("src")||q.get("utm_source")||"").toLowerCase().slice(0,40)}catch(e){return""}}
 var IND=[
@@ -120,11 +118,11 @@ function render(){
   h='<p class="eyebrow">7 dari 8</p><h2>Kira-kira dana yang disiapkan?</h2><p class="sub">Ini hanya untuk menyesuaikan saran. Bukan harga final. Tidak tahu juga tidak apa-apa.</p>'+simple(BUDG,"budget",false);
   nextB.disabled=!S.budget}
  if(id==="kontak"){
-  h='<p class="eyebrow">8 dari 8</p><h2>Terakhir, agar kami bisa membalas</h2><label class="f" for="nama">Nama Anda</label><input id="nama" type="text" autocomplete="name" value="'+esc(S.nama)+'" placeholder="Nama"><label class="f" for="wa">Nomor WhatsApp</label><input id="wa" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(S.wa)+'" placeholder="08xxxxxxxxxx"><label class="f" for="cat">Ada hal lain yang ingin disampaikan? (boleh kosong)</label><textarea id="cat" placeholder="Contoh: kami punya 3 cabang">'+esc(S.cat)+'</textarea><div class="hpw" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><label class="chk"><input type="checkbox" id="consent"'+(S.consent?' checked':'')+'><span>Saya setuju jawaban dan nomor WhatsApp saya disimpan oleh Bigma untuk menyiapkan penawaran dan menghubungi saya. Data tidak dibagikan ke pihak lain.</span></label><div class="err" id="err">Isi nama, nomor WhatsApp, dan centang persetujuan dulu ya.</div>';
+  h='<p class="eyebrow">8 dari 8</p><h2>Terakhir, agar kami bisa membalas</h2><label class="f" for="nama">Nama Anda</label><input id="nama" type="text" autocomplete="name" value="'+esc(S.nama)+'" placeholder="Nama"><label class="f" for="wa">Nomor WhatsApp</label><input id="wa" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(S.wa)+'" placeholder="08xxxxxxxxxx"><label class="f" for="cat">Ada hal lain yang ingin disampaikan? (boleh kosong)</label><textarea id="cat" placeholder="Contoh: kami punya 3 cabang">'+esc(S.cat)+'</textarea><div class="hpw" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><label class="chk"><input type="checkbox" id="consent"'+(S.consent?' checked':'')+'><span>Saya setuju jawaban dan nomor WhatsApp saya dikirim ke email Bigma untuk menyiapkan penawaran dan menghubungi saya. Data tidak dibagikan ke pihak lain.</span></label><div class="err" id="err">Isi nama, nomor WhatsApp, dan centang persetujuan dulu ya.</div>';
   nextB.textContent="Kirim"}
  if(id==="hasil"){
   var r=reco();var txt=summaryText();
-  h='<div style="text-align:center;font-size:40px">🎉</div><h2 style="text-align:center">Terima kasih, '+esc(S.nama||"")+'!</h2><p class="sub" style="text-align:center">'+(saved?'Jawaban Anda sudah kami terima. Kami akan menghubungi Anda lewat WhatsApp. Mau lebih cepat? Kirim ringkasan ini juga lewat WhatsApp.':'Jawaban Anda belum tersimpan otomatis. Tidak apa-apa, kirim ringkasan ini lewat WhatsApp dan kami balas dengan saran dan estimasi.')+'</p><div class="reco"><b>Saran awal kami</b>'+r.map(function(x){return'<span class="tag">'+x+'</span>'}).join("")+'<div class="hint">Ini baru perkiraan. Detailnya kita bahas bersama.</div></div><dl class="sum"><dt>Usaha</dt><dd>'+esc((S.usaha||"-")+" ("+lbl(IND,S.ind)+")")+'</dd><dt>Masalah</dt><dd>'+esc(S.pain.map(function(k){return lbl(PAIN,k)}).join(", "))+'</dd><dt>Tujuan</dt><dd>'+esc(S.goal.map(function(k){return lbl(GOAL,k)}).join(", "))+'</dd><dt>Ide yang menarik</dt><dd>'+esc(S.ideas.join("; ")||"-")+'</dd><dt>Pengguna dan perangkat</dt><dd>'+esc(S.users+" | "+S.dev)+'</dd><dt>Waktu dan dana</dt><dd>'+esc(S.time+" | "+S.budget)+'</dd></dl><a class="btn wa" id="wal" href="https://wa.me/'+WA+'?text='+encodeURIComponent(txt)+'" target="_blank" rel="noopener">Kirim lewat WhatsApp</a><button class="btn c" id="copy" type="button">Salin ringkasan</button><div class="hint" style="text-align:center">'+(saved?'Jawaban Anda disimpan di server Bigma hanya untuk menyiapkan penawaran.':'Tidak ada data yang tersimpan di server. Data terkirim hanya saat Anda menekan tombol WhatsApp.')+'</div><p class="foot">Bigma, Jakarta<br>businessbigma@gmail.com · WhatsApp 081536096663</p>';
+  h='<div style="text-align:center;font-size:40px">🎉</div><h2 style="text-align:center">Terima kasih, '+esc(S.nama||"")+'!</h2><p class="sub" style="text-align:center">'+(saved?'Jawaban Anda sudah kami terima. Kami akan menghubungi Anda lewat WhatsApp. Mau lebih cepat? Kirim ringkasan ini juga lewat WhatsApp.':'Jawaban Anda belum terkirim otomatis. Tidak apa-apa, kirim ringkasan ini lewat WhatsApp dan kami balas dengan saran dan estimasi.')+'</p><div class="reco"><b>Saran awal kami</b>'+r.map(function(x){return'<span class="tag">'+x+'</span>'}).join("")+'<div class="hint">Ini baru perkiraan. Detailnya kita bahas bersama.</div></div><dl class="sum"><dt>Usaha</dt><dd>'+esc((S.usaha||"-")+" ("+lbl(IND,S.ind)+")")+'</dd><dt>Masalah</dt><dd>'+esc(S.pain.map(function(k){return lbl(PAIN,k)}).join(", "))+'</dd><dt>Tujuan</dt><dd>'+esc(S.goal.map(function(k){return lbl(GOAL,k)}).join(", "))+'</dd><dt>Ide yang menarik</dt><dd>'+esc(S.ideas.join("; ")||"-")+'</dd><dt>Pengguna dan perangkat</dt><dd>'+esc(S.users+" | "+S.dev)+'</dd><dt>Waktu dan dana</dt><dd>'+esc(S.time+" | "+S.budget)+'</dd></dl><a class="btn wa" id="wal" href="https://wa.me/'+WA+'?text='+encodeURIComponent(txt)+'" target="_blank" rel="noopener">Kirim lewat WhatsApp</a><button class="btn c" id="copy" type="button">Salin ringkasan</button><div class="hint" style="text-align:center">'+(saved?'Jawaban Anda dikirim ke email Bigma hanya untuk menyiapkan penawaran dan tidak disimpan di situs ini.':'Tidak ada data yang terkirim ke email kami. Data terkirim hanya saat Anda menekan tombol WhatsApp.')+'</div><p class="foot">Bigma, Jakarta<br>businessbigma@gmail.com · WhatsApp 081536096663</p>';
   document.getElementById("nav").style.display="none";document.title="Terima kasih | Bigma"}
  app.innerHTML='<section class="step on">'+h+'</section>';
  window.scrollTo(0,0);
@@ -144,14 +142,11 @@ nextB.onclick=function(){read();
   submit().then(function(ok){saved=ok;step++;render()});return}
  step++;render()};
 function submit(){
- if(!SB_URL||!SB_KEY)return Promise.resolve(false);
  var ctl=new AbortController(),t=setTimeout(function(){ctl.abort()},8000);
  var body={nama:S.nama,whatsapp:S.wa,usaha:S.usaha,bidang:S.ind?lbl(IND,S.ind):"",
   masalah:S.pain.map(function(k){return lbl(PAIN,k)}),tujuan:S.goal.map(function(k){return lbl(GOAL,k)}),
   ide:S.ideas,pengguna:S.users||"",perangkat:S.dev||"",waktu:S.time||"",dana:S.budget||"",catatan:S.cat,
   saran:reco(),sumber:srcName(),persetujuan:S.consent,website:S.hp};
- return fetch(SB_URL+"/rest/v1/rpc/submit_kebutuhan",{method:"POST",signal:ctl.signal,
-  headers:{"Content-Type":"application/json",apikey:SB_KEY,Authorization:"Bearer "+SB_KEY},
-  body:JSON.stringify({payload:body})}).then(function(r){clearTimeout(t);return r.ok},function(){clearTimeout(t);return false})}
+ return fetch("/api/kebutuhan",{method:"POST",signal:ctl.signal,headers:{"Content-Type":"application/json"},body:JSON.stringify(body)}).then(function(r){clearTimeout(t);return r.ok},function(){clearTimeout(t);return false})}
 backB.onclick=function(){read();if(step>0){step--;render()}};
 render();
