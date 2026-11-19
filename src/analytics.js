@@ -1,4 +1,5 @@
 import { site } from './content.js'
+import { currentLang } from './lang.js'
 
 // Google Tag Manager container (public ID). Override with VITE_GTM_ID; set it to "off" to disable.
 const GTM_ID = ((import.meta.env.VITE_GTM_ID || 'GTM-NBVKZHXJ') + '').trim().replace(/^off$/i, '')
@@ -19,8 +20,22 @@ export const channelTexts = {
   referral: 'Halo Bigma, saya dapat info dari teman. Saya ingin berdiskusi tentang proyek.',
 }
 
-export const waHref = (source = 'website') =>
-  `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(channelTexts[source] || channelTexts.website)}`
+// English versions of the same texts, used when the visitor picked English.
+const channelTextsEn = {
+  website: 'Hello Bigma, I would like to discuss a project.',
+  google: 'Hello Bigma, I found you on Google. I would like to discuss a project.',
+  instagram: 'Hello Bigma, I found you on Instagram. I would like to discuss a project.',
+  linkedin: 'Hello Bigma, I found you on LinkedIn. I would like to discuss a project.',
+  facebook: 'Hello Bigma, I found you on Facebook. I would like to discuss a project.',
+  tiktok: 'Hello Bigma, I found you on TikTok. I would like to discuss a project.',
+  whatsapp: 'Hello Bigma, I saw Bigma on WhatsApp. I would like to discuss a project.',
+  referral: 'Hello Bigma, a friend told me about you. I would like to discuss a project.',
+}
+
+export const waHref = (source = 'website', lang = currentLang()) => {
+  const texts = lang === 'en' ? channelTextsEn : channelTexts
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(texts[source] || texts.website)}`
+}
 
 const KEY = 'bigma_src'
 
