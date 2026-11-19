@@ -1,0 +1,93 @@
+// Interface text for the main page. Indonesian is the default language.
+export const ui = {
+  id: {
+    skip: 'Lewati ke konten',
+    menu: 'Menu',
+    close: 'Tutup',
+    langLabel: 'Bahasa',
+    nav: { work: 'Contoh Karya', needs: 'Ceritakan Kebutuhan', services: 'Layanan', process: 'Proses', about: 'Tentang', contact: 'Kontak' },
+    hero: {
+      eyebrow: 'Custom software',
+      title: 'Software custom untuk siapa saja yang membutuhkannya.',
+      intro:
+        'Kami membuat website, aplikasi, dan sistem sesuai kebutuhan Anda, baik untuk bisnis, organisasi, komunitas, maupun pribadi. Dari ide sampai siap dipakai.',
+      whatsapp: 'Chat WhatsApp',
+      needs: 'Ceritakan Kebutuhan Anda',
+      work: 'Lihat Contoh Karya',
+    },
+    needs: {
+      eyebrow: 'Belum tahu mulai dari mana?',
+      title: 'Ceritakan kebutuhan Anda, kami bantu cari solusinya',
+      sub: 'Tidak perlu paham istilah teknis. Cukup ketuk pilihan yang paling mirip dengan situasi Anda, lalu kami siapkan saran awal yang sesuai dengan usaha Anda.',
+      cards: [
+        { title: 'Untuk apa?', text: 'Supaya kami paham usaha dan masalah Anda sebelum kita bicara, jadi diskusinya langsung ke inti.' },
+        { title: 'Berapa lama?', text: 'Sekitar 3 menit dan 8 pertanyaan singkat. Tanpa login dan tanpa memasang aplikasi.' },
+        { title: 'Apa yang Anda dapat?', text: 'Saran awal jenis software yang cocok. Setelah itu kami balas lewat WhatsApp untuk membahas langkah dan perkiraan biaya, tanpa kewajiban.' },
+      ],
+      stepsTitle: 'Setelah Anda mengirim',
+      steps: [
+        'Anda mengetuk pilihan jawaban, tidak perlu mengetik panjang.',
+        'Kami membaca jawaban Anda dan menyiapkan saran awal.',
+        'Kami menghubungi Anda lewat WhatsApp untuk lanjut ngobrol.',
+      ],
+      cta: 'Mulai Ceritakan Kebutuhan',
+      note: 'Jawaban Anda hanya dipakai untuk menyiapkan penawaran dan tidak dibagikan ke pihak lain.',
+    },
+    work: { eyebrow: 'Contoh Karya', title: 'Website dan aplikasi yang sudah kami buat', sub: 'Klik kartu untuk membuka websitenya.', visit: 'Buka website', alt: 'Tampilan' },
+    services: { eyebrow: 'Layanan', title: 'Apa yang bisa kami buat', sub: 'Website, aplikasi web, aplikasi mobile, sampai software lain sesuai kebutuhan Anda.' },
+    process: { eyebrow: 'Proses', title: 'Dari ide sampai siap dipakai' },
+    about: {
+      eyebrow: 'Tentang Bigma',
+      title: 'Hasil yang jelas dan bisa dipakai',
+      text: (city) => `Bigma adalah perusahaan software dari ${city}. Kami fokus pada hasil yang jelas dan bisa dipakai, bukan sekadar tampilan.`,
+    },
+    contact: { title: 'Punya proyek? Ceritakan kebutuhan Anda.', sub: 'Kami balas secepatnya.', whatsapp: 'Chat WhatsApp', email: 'Kirim Email', location: 'Lokasi' },
+    floatLabel: 'Chat WhatsApp',
+    floatAria: 'Chat Bigma lewat WhatsApp',
+  },
+  en: {
+    skip: 'Skip to content',
+    menu: 'Menu',
+    close: 'Close',
+    langLabel: 'Language',
+    nav: { work: 'Our Work', needs: 'Tell Us Your Needs', services: 'Services', process: 'Process', about: 'About', contact: 'Contact' },
+    hero: {
+      eyebrow: 'Custom software',
+      title: 'Custom software for anyone who needs it.',
+      intro:
+        'We build websites, apps, and systems that fit your needs, whether for a business, an organisation, a community, or yourself. From idea to ready to use.',
+      whatsapp: 'Chat on WhatsApp',
+      needs: 'Tell Us What You Need',
+      work: 'See Our Work',
+    },
+    needs: {
+      eyebrow: 'Not sure where to start?',
+      title: 'Tell us what you need and we will help find the solution',
+      sub: 'No technical knowledge needed. Just tap the options that sound most like your situation, and we will prepare a first suggestion that fits your business.',
+      cards: [
+        { title: 'What is it for?', text: 'So we understand your business and your problem before we talk, and the discussion goes straight to the point.' },
+        { title: 'How long does it take?', text: 'About 3 minutes and 8 short questions. No login and no app to install.' },
+        { title: 'What do you get?', text: 'A first suggestion of the kind of software that fits. Then we reply on WhatsApp to discuss next steps and a cost estimate, with no obligation.' },
+      ],
+      stepsTitle: 'After you send it',
+      steps: [
+        'You tap your answers, no long typing needed.',
+        'We read your answers and prepare a first suggestion.',
+        'We contact you on WhatsApp to continue the conversation.',
+      ],
+      cta: 'Start Telling Us',
+      note: 'Your answers are only used to prepare an offer and are not shared with anyone else.',
+    },
+    work: { eyebrow: 'Our Work', title: 'Websites and apps we have built', sub: 'Click a card to open the website.', visit: 'Open website', alt: 'Screenshot of' },
+    services: { eyebrow: 'Services', title: 'What we can build', sub: 'Websites, web apps, mobile apps, and other software that fits your needs.' },
+    process: { eyebrow: 'Process', title: 'From idea to ready to use' },
+    about: {
+      eyebrow: 'About Bigma',
+      title: 'Clear results that you can use',
+      text: (city) => `Bigma is a software company from ${city}. We focus on clear results that you can actually use, not just looks.`,
+    },
+    contact: { title: 'Have a project? Tell us what you need.', sub: 'We reply as soon as we can.', whatsapp: 'Chat on WhatsApp', email: 'Send Email', location: 'Location' },
+    floatLabel: 'Chat on WhatsApp',
+    floatAria: 'Chat with Bigma on WhatsApp',
+  },
+}
