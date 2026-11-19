@@ -61,11 +61,11 @@ export default function App() {
             <Logo />
           </a>
           <nav id="menu" className={open ? 'open' : ''}>
-            <a href="#portofolio" className="nav-work" onClick={close}>{t.nav.work}</a>
-            <a href="#kebutuhan" onClick={close}>{t.nav.needs}</a>
             <a href="#layanan" onClick={close}>{t.nav.services}</a>
+            <a href="#portofolio" className="nav-work" onClick={close}>{t.nav.work}</a>
             <a href="#proses" onClick={close}>{t.nav.process}</a>
             <a href="#tentang" onClick={close}>{t.nav.about}</a>
+            <a href="#kebutuhan" onClick={close}>{t.nav.needs}</a>
             <a href="#kontak" className="btn btn-small" onClick={close}>{t.nav.contact}</a>
           </nav>
           <div className="nav-tools">
@@ -109,34 +109,24 @@ export default function App() {
           </div>
         </section>
 
-        <section id="kebutuhan" className="section needs">
+        <section id="layanan" className="section">
           <div className="container">
             <div className="head">
-              <p className="eyebrow dark">{t.needs.eyebrow}</p>
-              <h2>{t.needs.title}</h2>
-              <p className="sub">{t.needs.sub}</p>
+              <p className="eyebrow dark">{t.services.eyebrow}</p>
+              <h2>{t.services.title}</h2>
+              <p className="sub">{t.services.sub}</p>
             </div>
-            <div className="needs-grid">
-              {t.needs.cards.map((c) => (
-                <div className="needs-card" key={c.title}>
-                  <h3>{c.title}</h3>
-                  <p>{c.text}</p>
+            <div className="svc-grid">
+              {services.map((s) => (
+                <div className="svc" key={s.key}>
+                  <span className="icon">{icons[s.key]}</span>
+                  <h3>{s[lang].title}</h3>
+                  <p>{s[lang].text}</p>
                 </div>
               ))}
             </div>
-            <div className="needs-flow">
-              <h3>{t.needs.stepsTitle}</h3>
-              <ol>
-                {t.needs.steps.map((x, i) => (
-                  <li key={i}><span className="num">{i + 1}</span><span>{x}</span></li>
-                ))}
-              </ol>
-              <a className="btn needs-cta" href="/kebutuhan/">{t.needs.cta}</a>
-              <p className="needs-note">{t.needs.note}</p>
-            </div>
           </div>
         </section>
-
         <section id="portofolio" className="section alt">
           <div className="container">
             <div className="head">
@@ -167,27 +157,7 @@ export default function App() {
             </div>
           </div>
         </section>
-
-        <section id="layanan" className="section">
-          <div className="container">
-            <div className="head">
-              <p className="eyebrow dark">{t.services.eyebrow}</p>
-              <h2>{t.services.title}</h2>
-              <p className="sub">{t.services.sub}</p>
-            </div>
-            <div className="svc-grid">
-              {services.map((s) => (
-                <div className="svc" key={s.key}>
-                  <span className="icon">{icons[s.key]}</span>
-                  <h3>{s[lang].title}</h3>
-                  <p>{s[lang].text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="proses" className="section alt">
+        <section id="proses" className="section">
           <div className="container">
             <div className="head">
               <p className="eyebrow dark">{t.process.eyebrow}</p>
@@ -204,8 +174,7 @@ export default function App() {
             </ol>
           </div>
         </section>
-
-        <section id="tentang" className="section">
+        <section id="tentang" className="section alt">
           <div className="container about">
             <div>
               <p className="eyebrow dark">{t.about.eyebrow}</p>
@@ -214,7 +183,33 @@ export default function App() {
             <p className="about-text">{t.about.text(site.city)}</p>
           </div>
         </section>
-
+        <section id="kebutuhan" className="section needs">
+          <div className="container">
+            <div className="head">
+              <p className="eyebrow dark">{t.needs.eyebrow}</p>
+              <h2>{t.needs.title}</h2>
+              <p className="sub">{t.needs.sub}</p>
+            </div>
+            <div className="needs-grid">
+              {t.needs.cards.map((c) => (
+                <div className="needs-card" key={c.title}>
+                  <h3>{c.title}</h3>
+                  <p>{c.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="needs-flow">
+              <h3>{t.needs.stepsTitle}</h3>
+              <ol>
+                {t.needs.steps.map((x, i) => (
+                  <li key={i}><span className="num">{i + 1}</span><span>{x}</span></li>
+                ))}
+              </ol>
+              <a className="btn needs-cta" href="/kebutuhan/">{t.needs.cta}</a>
+              <p className="needs-note">{t.needs.note}</p>
+            </div>
+          </div>
+        </section>
         <section id="kontak" className="cta">
           <div className="container cta-inner">
             <div>
